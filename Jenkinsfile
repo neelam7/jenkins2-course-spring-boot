@@ -10,7 +10,7 @@ pipeline {
     stage('Compile') { 
       tools {
         // Specify Tool Name from your global tool configuration
-		jdk 'jdk8'
+		jdk 'JDK'
         maven 'Maven'
       }
       steps {
