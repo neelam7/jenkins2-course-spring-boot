@@ -18,5 +18,11 @@ pipeline {
 	      powershell label: '', script: 'mvn clean package'
       }
     }
+	  stage('Email Notification') { 
+      mail bcc: '', body: '''Hi ,
+Welcome to Jenkins email alert.
+Thanks & Regards,
+Neelam Chouhan''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'neelam7c@gmail.com'
+	  
   }
 }
